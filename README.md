@@ -1,2 +1,2 @@
-# restaurante-luxe
-Pagina restaurante luxe
+# Restaurante Luxe
+Proyecto del menú premium con Astro + Tailwind.
