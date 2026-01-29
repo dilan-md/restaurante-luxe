@@ -1,10 +1,10 @@
-<footer class="bg-black text-white pt-20 pb-10 px-6">
+<footer class="bg-black text-white pt-12 md:pt-20 pb-10 px-4 md:px-6">
   <!-- PARTE SUPERIOR: GRID -->
   <div
-    class="max-w-300 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16"
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16"
   >
     <!-- Col 1: Logo + texto -->
-    <div class="space-y-6">
+    <div class="space-y-4 md:space-y-6">
       <div class="flex items-center gap-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,8 @@
         <!-- Web -->
         <a
           href="#"
-          class="w-10 h-10 rounded border border-white/20 flex items-center justify-center hover:border-yellow-400 transition-colors"
+          class="w-10 h-10 rounded border border-white/20 flex items-center justify-center hover:border-yellow-400 hover:bg-yellow-400/10 transition-all"
+          aria-label="Sitio web"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +70,8 @@
         <!-- Instagram -->
         <a
           href="#"
-          class="w-10 h-10 rounded border border-white/20 flex items-center justify-center hover:border-yellow-400 transition-colors"
+          class="w-10 h-10 rounded border border-white/20 flex items-center justify-center hover:border-yellow-400 hover:bg-yellow-400/10 transition-all"
+          aria-label="Instagram"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +90,8 @@
         <!-- Share -->
         <a
           href="#"
-          class="w-10 h-10 rounded border border-white/20 flex items-center justify-center hover:border-yellow-400 transition-colors"
+          class="w-10 h-10 rounded border border-white/20 flex items-center justify-center hover:border-yellow-400 hover:bg-yellow-400/10 transition-all"
+          aria-label="Compartir"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -111,13 +114,13 @@
 
   <!-- PARTE INFERIOR: FLEX -->
   <div
-    class="max-w-300 mx-auto border-t border-white/10 pt-8
+    class="max-w-6xl mx-auto border-t border-white/10 pt-6 md:pt-8
            flex flex-col md:flex-row justify-between items-center gap-4
            text-xs text-slate-500 uppercase tracking-widest"
   >
-    <p>© 2026 Restaurante Luxe. Todos los derechos reservados.</p>
+    <p class="text-center md:text-left">© 2026 Restaurante Luxe. Todos los derechos reservados.</p>
 
-    <div class="flex gap-6">
+    <div class="flex gap-4 md:gap-6">
       <a href="#" class="hover:text-white transition-colors">Privacidad</a>
       <a href="#" class="hover:text-white transition-colors">Accesibilidad</a>
     </div>
