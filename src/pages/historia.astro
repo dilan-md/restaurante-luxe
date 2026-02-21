@@ -1,0 +1,192 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Nuestra Historia | Restaurante Luxe">
+    <!-- NAVIGATION (OVERLAID ON HERO) -->
+    <nav
+        class="absolute top-0 left-0 w-full z-20 py-6 px-4 md:px-12 transition-all"
+    >
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <!-- ATRAS -->
+            <a
+                href="/"
+                class="flex items-center gap-2 group text-white/80 hover:text-yellow-400 transition-all"
+            >
+                <div
+                    class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-yellow-400"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"
+                        ></path>
+                        <path d="M5 12l14 0"></path>
+                        <path d="M5 12l6 6"></path>
+                        <path d="M5 12l6 -6"></path>
+                    </svg>
+                </div>
+                <span class="font-bold text-sm tracking-widest hidden md:inline"
+                    >VOLVER</span
+                >
+            </a>
+
+            <!-- LOGO -->
+            <div
+                class="text-center"
+                style="font-family: 'Noto Serif Variable', serif;"
+            >
+                <h1
+                    class="text-xl md:text-2xl tracking-[0.4em] font-black text-white"
+                >
+                    RESTAURANTE LUXE
+                </h1>
+            </div>
+
+            <!-- SPACER -->
+            <div class="w-10 md:w-20"></div>
+        </div>
+    </nav>
+
+    <!-- DRAMATIC HERO -->
+    <section
+        class="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden"
+    >
+        <Image
+            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Tradición y Herencia"
+            width={1350}
+            height={900}
+            loading="eager"
+            class="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+        />
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#12110a]"
+        >
+        </div>
+
+        <div class="relative z-10 text-center px-4 md:mt-12">
+            <h3
+                class="text-yellow-400 uppercase text-xs md:text-sm mb-4 tracking-[0.5em] animate-fade-in-up"
+            >
+                Nuestra Herencia
+            </h3>
+            <h1
+                class="text-white text-4xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-tight animate-fade-in-up [animation-delay:200ms]"
+            >
+                Desde <span class="text-yellow-400 italic font-normal"
+                    >2005</span
+                >
+            </h1>
+            <div
+                class="w-24 h-1 bg-yellow-400 mx-auto mt-8 animate-fade-in-up [animation-delay:400ms]"
+            >
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section
+        class="relative z-10 -mt-20 pb-24 px-4 flex justify-center bg-transparent"
+        style="font-family: 'Noto Serif Variable', serif;"
+    >
+        <div class="max-w-4xl w-full space-y-12">
+            <!-- ORÍGENES (GLASSMORPHISM) -->
+            <div
+                class="backdrop-blur-xl bg-white/[0.03] p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl reveal-content"
+            >
+                <h2
+                    class="text-3xl font-black mb-6 uppercase tracking-widest text-yellow-400"
+                >
+                    Orígenes
+                </h2>
+                <p class="text-lg text-slate-300 leading-relaxed mb-6">
+                    Fundado en el corazón de la ciudad en 2005, <span
+                        class="text-white font-bold">Restaurante Luxe</span
+                    > nació con una visión clara: elevar el arte del asado a niveles
+                    de sofisticación nunca antes vistos en la región.
+                </p>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Lo que comenzó como una pequeña carnicería artesanal
+                    familiar, se transformó rápidamente en el destino predilecto
+                    para los conocedores de la carne, gracias a nuestra obsesión
+                    por la calidad y el respeto por el producto.
+                </p>
+            </div>
+
+            <!-- FILOSOFÍA (GLASSMORPHISM) -->
+            <div
+                class="backdrop-blur-xl bg-white/[0.03] p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl reveal-content delay-200"
+            >
+                <h2
+                    class="text-3xl font-black mb-6 uppercase tracking-widest text-yellow-400"
+                >
+                    Nuestra Filosofía
+                </h2>
+                <p class="text-lg text-slate-300 leading-relaxed mb-6">
+                    Creemos que el tiempo es el ingrediente secreto. Por eso,
+                    cada uno de nuestros cortes especiales es madurado en
+                    condiciones controladas durante <span
+                        class="text-yellow-400 font-bold">45 días</span
+                    >, permitiendo que las enzimas naturales transformen la
+                    carne en una experiencia sensorial única.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                    <div
+                        class="text-center p-6 border border-white/5 rounded-2xl bg-white/[0.02]"
+                    >
+                        <p class="text-3xl font-black text-yellow-400 mb-2">
+                            45
+                        </p>
+                        <p
+                            class="text-[10px] uppercase tracking-widest text-slate-500"
+                        >
+                            Días de Maduración
+                        </p>
+                    </div>
+                    <div
+                        class="text-center p-6 border border-white/5 rounded-2xl bg-white/[0.02]"
+                    >
+                        <p class="text-3xl font-black text-yellow-400 mb-2">
+                            +20
+                        </p>
+                        <p
+                            class="text-[10px] uppercase tracking-widest text-slate-500"
+                        >
+                            Cortes Exclusivos
+                        </p>
+                    </div>
+                    <div
+                        class="text-center p-6 border border-white/5 rounded-2xl bg-white/[0.02]"
+                    >
+                        <p class="text-3xl font-black text-yellow-400 mb-2">
+                            100%
+                        </p>
+                        <p
+                            class="text-[10px] uppercase tracking-widest text-slate-500"
+                        >
+                            Origen Responsable
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    :global(body) {
+        background-color: #12110a;
+    }
+</style>

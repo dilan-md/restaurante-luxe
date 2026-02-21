@@ -1,106 +1,236 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import { Image } from "astro:assets";
 ---
 
-<Layout title="Menú Completo">
+<Layout title="Menú | Restaurante Luxe">
+  <!-- NAVIGATION (OVERLAID ON HERO) -->
   <nav
-    class="py-4 px-12 text-yellow-400 uppercase"
-    style="font-family: 'Noto Sans Variable', 'Noto Serif Variable', serif;"
+    class="absolute top-0 left-0 w-full z-20 py-6 px-4 md:px-12 transition-all"
   >
-    <!-- Chevron -->
-    <a href="/" class="flex items-center gap-2"
-      ><svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M15 6l-6 6l6 6"></path></svg
-      ><span
-        class="font-medium"
-        style="font-family: 'Noto Sans Variable', 'Noto Serif Variable', serif;"
-        >ATRAS</span
-      ></a
-    >
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <!-- ATRAS -->
+      <a
+        href="/"
+        class="flex items-center gap-2 group text-white/80 hover:text-yellow-400 transition-all"
+      >
+        <div
+          class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-yellow-400"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 12l14 0"></path>
+            <path d="M5 12l6 6"></path>
+            <path d="M5 12l6 -6"></path>
+          </svg>
+        </div>
+        <span class="font-bold text-sm tracking-widest hidden md:inline"
+          >VOLVER</span
+        >
+      </a>
 
-    <div
-      class="flex justify-center -mt-6"
-      style="font-family: 'Noto Serif Variable', serif;"
-    >
-      <h1 class="text-2xl tracking-widest">RESTAURANTE LUXE</h1>
+      <!-- LOGO -->
+      <div
+        class="text-center"
+        style="font-family: 'Noto Serif Variable', serif;"
+      >
+        <h1 class="text-xl md:text-2xl tracking-[0.4em] font-black text-white">
+          RESTAURANTE LUXE
+        </h1>
+      </div>
+
+      <!-- SPACER -->
+      <div class="w-10 md:w-20"></div>
     </div>
   </nav>
 
-  <!-- ENTRADA -->
-
+  <!-- DRAMATIC HERO -->
   <section
-    class="flex flex-col items-center"
-    style="font-family: 'Noto Serif Variable', serif;"
+    class="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden"
   >
-    <h1 class="text-4xl uppercase mt-16 text-yellow-400 tracking-widest">
-      ENTRADAs
-    </h1>
-    <div class="flex justify-center mx-auto bg-yellow-400 h-1 w-24 rounded m-7">
+    <Image
+      src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      alt="Menú Especial"
+      width={1350}
+      height={900}
+      loading="eager"
+      class="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#12110a]"
+    >
     </div>
 
-    <!-- Elemento 1 -->
+    <div class="relative z-10 text-center px-4 md:mt-12">
+      <h3
+        class="text-yellow-400 uppercase text-xs md:text-sm mb-4 tracking-[0.5em] animate-fade-in-up"
+      >
+        Sabores Exquisitos
+      </h3>
+      <h1
+        class="text-white text-4xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-tight animate-fade-in-up [animation-delay:200ms]"
+      >
+        Nuestra <br />
+        <span class="text-yellow-400 italic font-normal">Carta</span>
+      </h1>
+      <div
+        class="w-24 h-1 bg-yellow-400 mx-auto mt-8 animate-fade-in-up [animation-delay:400ms]"
+      >
+      </div>
+    </div>
+  </section>
 
-    <h1 class="text-2xl">Tomahawk Madurado</h1>
-    <p class="mt-2 text-slate-500">
-      32 oz con hueso, madurado 45 días, mantequilla de romero y ajo.
-    </p>
-    <span class="font-bold text-lg mt-3 text-yellow-400">$85k</span>
+  <!-- MAIN CONTENT (OVERLAPPING HERO SLIGHTLY) -->
+  <section
+    class="relative z-10 -mt-20 pb-24 px-4 flex justify-center bg-transparent"
+    style="font-family: 'Noto Serif Variable', serif;"
+  >
+    <div class="max-w-5xl w-full">
+      <!-- CATEGORY: ENTRADAS -->
+      <div
+        class="backdrop-blur-xl bg-white/[0.03] p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl reveal-content mb-12"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-2xl md:text-3xl font-black uppercase tracking-[0.3em] text-yellow-400"
+          >
+            Entradas
+          </h2>
+          <div class="mx-auto bg-yellow-400 h-0.5 w-16 mt-4"></div>
+        </div>
 
-    <!-- Elementos 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+          <div class="group">
+            <div class="flex items-center justify-between gap-4">
+              <h3
+                class="text-base md:text-lg text-white font-bold uppercase tracking-wide group-hover:text-yellow-400 transition-colors"
+              >
+                Tomahawk Madurado
+              </h3>
+              <div class="border-b border-dashed border-white/20 grow h-4">
+              </div>
+              <span class="font-bold text-lg text-yellow-400">$85k</span>
+            </div>
+            <p
+              class="mt-2 text-slate-400 text-xs md:text-sm italic leading-relaxed"
+            >
+              32 oz con hueso, madurado 45 días, mantequilla de romero y ajo.
+            </p>
+          </div>
 
-    <h1 class="text-2xl mt-4">Ribeye Premium</h1>
-    <p class="mt-2 text-slate-500">
-      Corte jugoso de 28 oz, madurado 30 días, mantequilla de hierbas frescas.
-    </p>
-    <span class="font-bold text-lg mt-3 text-yellow-400">$70k</span>
+          <div class="group">
+            <div class="flex items-center justify-between gap-4">
+              <h3
+                class="text-base md:text-lg text-white font-bold uppercase tracking-wide group-hover:text-yellow-400 transition-colors"
+              >
+                Ribeye Premium
+              </h3>
+              <div class="border-b border-dashed border-white/20 grow h-4">
+              </div>
+              <span class="font-bold text-lg text-yellow-400">$70k</span>
+            </div>
+            <p
+              class="mt-2 text-slate-400 text-xs md:text-sm italic leading-relaxed"
+            >
+              Corte jugoso de 28 oz, madurado 30 días, mantequilla de hierbas
+              frescas.
+            </p>
+          </div>
 
-    <!-- elemenmtos 3 -->
+          <div class="group">
+            <div class="flex items-center justify-between gap-4">
+              <h3
+                class="text-base md:text-lg text-white font-bold uppercase tracking-wide group-hover:text-yellow-400 transition-colors"
+              >
+                Asado Especial
+              </h3>
+              <div class="border-b border-dashed border-white/20 grow h-4">
+              </div>
+              <span class="font-bold text-lg text-yellow-400">$65k</span>
+            </div>
+            <p
+              class="mt-2 text-slate-400 text-xs md:text-sm italic leading-relaxed"
+            >
+              Corte jugoso de 24 oz, madurado 30 días, acompañado de mantequilla
+              de hierbas.
+            </p>
+          </div>
 
-    <h1 class="text-2xl mt-4">Asado Especial</h1>
-    <p class="mt-2 text-slate-500">
-      Corte jugoso de 24 oz, madurado 30 días, acompañado de mantequilla de
-      hierbas.
-    </p>
-    <span class="font-bold text-lg mt-3 text-yellow-400">$65k</span>
+          <div class="group">
+            <div class="flex items-center justify-between gap-4">
+              <h3
+                class="text-base md:text-lg text-white font-bold uppercase tracking-wide group-hover:text-yellow-400 transition-colors"
+              >
+                Filete Angus
+              </h3>
+              <div class="border-b border-dashed border-white/20 grow h-4">
+              </div>
+              <span class="font-bold text-lg text-yellow-400">$60k</span>
+            </div>
+            <p
+              class="mt-2 text-slate-400 text-xs md:text-sm italic leading-relaxed"
+            >
+              Filete de 20 oz, carne Angus certificada, acompañado de salsa de
+              vino tinto.
+            </p>
+          </div>
 
-    <!-- elemento4 -->
+          <div class="group">
+            <div class="flex items-center justify-between gap-4">
+              <h3
+                class="text-base md:text-lg text-white font-bold uppercase tracking-wide group-hover:text-yellow-400 transition-colors"
+              >
+                Porterhouse
+              </h3>
+              <div class="border-b border-dashed border-white/20 grow h-4">
+              </div>
+              <span class="font-bold text-lg text-yellow-400">$90k</span>
+            </div>
+            <p
+              class="mt-2 text-slate-400 text-xs md:text-sm italic leading-relaxed"
+            >
+              Corte de 36 oz, combinación de lomo y solomillo, madurado 40 días.
+            </p>
+          </div>
 
-    <h1 class="text-2xl mt-4">Filete Angus</h1>
-    <p class="mt-2 text-slate-500">
-      Filete de 20 oz, carne Angus certificada, acompañado de salsa de vino
-      tinto.
-    </p>
-    <span class="font-bold text-lg mt-3 text-yellow-400">$60k</span>
-
-    <!-- elemento 5 -->
-
-    <h1 class="text-2xl mt-4">Porterhouse</h1>
-    <p class="mt-2 text-slate-500">
-      Corte de 36 oz, combinación de lomo y solomillo, madurado 40 días.
-    </p>
-    <span class="font-bold text-lg mt-3 text-yellow-400">$90k</span>
-
-    <!-- elemento 6 -->
-
-        <h1 class="text-2xl mt-4">New York Strip</h1>
-    <p class="mt-2 text-slate-500">
-      Corte clásico de 18 oz, madurado 25 días, servido con mantequilla de
-        ajo.
-    </p>
-    <span class="font-bold text-lg mt-3 text-yellow-400">$55k</span>
+          <div class="group">
+            <div class="flex items-center justify-between gap-4">
+              <h3
+                class="text-base md:text-lg text-white font-bold uppercase tracking-wide group-hover:text-yellow-400 transition-colors"
+              >
+                New York Strip
+              </h3>
+              <div class="border-b border-dashed border-white/20 grow h-4">
+              </div>
+              <span class="font-bold text-lg text-yellow-400">$55k</span>
+            </div>
+            <p
+              class="mt-2 text-slate-400 text-xs md:text-sm italic leading-relaxed"
+            >
+              Corte clásico de 18 oz, madurado 25 días, servido con mantequilla
+              de ajo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>
 
-<!-- Links en el centro -->
+<style>
+  :global(body) {
+    background-color: #12110a;
+  }
+</style>
